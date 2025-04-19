@@ -29,6 +29,18 @@ public void setName(String name) { this.name = name; }
     public void setDob(String dob) { this.dob = dob; }
     public void setMarks(double marks) { this.marks = marks; }
 
+public void updateFrom(Student other) {
+        this.name = other.name;
+        this.dob = other.dob;
+        this.marks = other.marks;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("PRN: %s | Name: %-15s | DOB: %s | Marks: %.2f",
+                prn, name, dob, marks);
+    }
+}
 
 
 
